@@ -85,7 +85,7 @@
   <footer class="text-center text-lg-start text-muted"  style="background-color: #37517e;position: absolute;
   bottom: 0;width: 100%">
     <div class="text-center p-4 bg-footer"  style="color: white;">
-      &copy; Copyright	by 20552011282_Gesit Nur Pratama_TIF K20
+      &copy; Copyright	by 20552011282_Gesit Nur Pratama_TIF K20_UASWEB1
     </div>
   </footer>
   <!-- End Footer -->
