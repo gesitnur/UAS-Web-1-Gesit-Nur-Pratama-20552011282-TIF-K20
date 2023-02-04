@@ -85,14 +85,14 @@
               <div class="section-title">
                 <h2>Shoes Data</h2>
               </div>
-              <a href="add_shoes.php">Add Shoes</a>
+              <a href="add_shoes.php" class="btn btn-primary ">Add Shoes</a>
               <?php 
                 $api_url = 'https://63b58ffc58084a7af3989158.mockapi.io/shoes';
                 $data = file_get_contents($api_url);
                 $result = json_decode($data);
               ?>
               <?php foreach ($result as $bicycle){ ?>
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" style="margin-top: 10px">
                 <div class="box">
                   <h3><?php print_r($bicycle->name); ?></h3>
                   <h4><?php print_r($bicycle->price); ?></h4>
@@ -118,50 +118,6 @@
         <!-- Start Project Content-->
         <section id="services" class="services section-bg">
           <div class="container" data-aos="fade-up">
-            <?php 
-              $api_url = 'https://63b58ffc58084a7af3989158.mockapi.io/shoes';
-              $data = file_get_contents($api_url);
-              $result = json_decode($data);
-              foreach ($result as $value) {
-                print_r($value);
-                echo nl2br("\n");
-                echo nl2br("\n");
-              }
-            ?>
-            <table style="border: 1px solid black;">
-            <thead>
-              <tr  style="border: 1px solid black;">
-              <th>ID</th>
-              <th>Nama</th>
-              <th>Harga</th>
-              <th>Stok</th>
-              <th>Jumlah Terjual</th>
-              </tr>
-            </thead>
-            
-            <tbody>
-              <tr  style="border: 1px solid black;">
-                <?php foreach ($result as $bicycle){ ?>
-                <td> <?php print_r($bicycle->id); ?> </td>
-                <td> <?php print_r($bicycle->name); ?> </td>
-                <td> <?php print_r($bicycle->price); ?> </td>
-                <td> <?php print_r($bicycle->stock); ?> </td>
-                <td> <?php print_r($bicycle->amount_sold); ?> 
-                <form action="delete.php" method="post">
-<input type="text" name="id" value="<?php print_r($bicycle->id) ?>"><br>
-<input type="submit">
-</form></td>
-              </tr>
-                <?php } ?>
-              </tbody>
-
-            </table>
-            <hr>
-            
-
-
-                  
-            <?php ?>
             <div class="section-title">
               <h2>Our Latest Project</h2>
             </div>
