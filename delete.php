@@ -14,5 +14,5 @@
   // var_dump($url);
   if ($result === FALSE) { /* Handle error */ }
   
-  header('Location: dashboard.php');
+  header('Location: index.php');
 ?>
